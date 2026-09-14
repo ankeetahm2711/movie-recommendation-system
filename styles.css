@@ -1,32 +1,232 @@
 body {
-  background-color: #0d1117;
+    margin: 0;
+    background: #111318;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.custom-navbar {
+    background: #181a20;
+    border-bottom: 1px solid #292c35;
+}
+
+.navbar-brand {
+    font-size: 1.35rem;
+}
+
+.nav-link {
+    margin-left: 15px;
+    color: #b8bcc7 !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff !important;
+}
+
+.hero-section {
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 80% 40%, #27345e 0%, transparent 35%),
+        linear-gradient(135deg, #111318, #181b25);
+}
+
+.hero-content {
+    max-width: 720px;
+    padding: 70px 0;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 30px;
+    background: #242936;
+    color: #8db5ff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.08;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #4d8dff;
+}
+
+.hero-content p {
+    color: #a9adb8;
+    font-size: 1.15rem;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background: #347cff;
+    border-color: #347cff;
+}
+
+.btn-primary:hover {
+    background: #2568df;
+    border-color: #2568df;
+}
+
+.recommendation-section {
+    padding: 90px 0;
+    background: #15171d;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading span {
+    color: #4d8dff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: #8f94a0;
+}
+
+.recommendation-box {
+    background: #1e2129;
+    border: 1px solid #2d313c;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.form-label {
+    color: #c7cad2;
+}
+
+.form-select {
+    background-color: #111318;
+    color: white;
+    border-color: #363a46;
+}
+
+.form-select:focus {
+    background-color: #111318;
+    color: white;
+    border-color: #4d8dff;
+    box-shadow: none;
 }
 
 .card {
-  border: none;
-  background-color: #1e2228;
-  color: #e1e4e8;
+    background: #1e2129;
+    color: white;
+    border: 1px solid #2d313c;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #4d8dff;
 }
 
 .card-img-top {
-  width: 100%;
-  height: 0;
-  padding-bottom: 150%; /* 2:3 aspect ratio (adjust as needed) */
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
+    min-height: 280px;
+    background-size: cover;
+    background-position: center;
 }
 
 .card-body {
-  padding: 1rem;
+    padding: 18px;
 }
 
 .card-title {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 .card-text {
-  font-size: 0.9rem;
-  color: #c9d1d9;
+    color: #9297a4;
+}
+
+.features-section {
+    padding: 90px 0;
+    background: #111318;
+}
+
+.feature-card {
+    height: 100%;
+    padding: 35px 25px;
+    text-align: center;
+    background: #1b1e25;
+    border: 1px solid #292d37;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #4d8dff;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card h4 {
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #8f94a0;
+    line-height: 1.6;
+}
+
+.footer {
+    padding: 25px 0;
+    background: #0c0e12;
+    color: #737884;
+}
+
+.footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+    .hero-content h1 {
+        font-size: 2.7rem;
+    }
+
+    .hero-section {
+        min-height: auto;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .recommendation-section,
+    .features-section {
+        padding: 60px 0;
+    }
 }
