@@ -55,7 +55,7 @@ function displayRecommendationCards(list) {
                     <h5 class="card-title">${movie.title}</h5>
 
                     <p class="card-text">
-                        ${movie.genre} • ${movie.year}
+                        ${movie.genre} â€¢ ${movie.year}
                     </p>
                 </div>
 

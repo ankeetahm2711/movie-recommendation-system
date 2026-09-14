@@ -36,10 +36,23 @@ async function searchMovies() {
 function displayMovies(movies) {
     movieGrid.innerHTML = "";
 
+    if (movies.length === 0) {
+        movieGrid.innerHTML = `
+            <div class="col-12">
+                <p class="text-center text-secondary">
+                    No movies found.
+                </p>
+            </div>
+        `;
+        return;
+    }
+
     movies.forEach(movie => {
         movieGrid.innerHTML += `
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100"
+                     onclick="window.location.href='details.html?id=${movie.id}'"
+                     style="cursor: pointer;">
                     <div class="card-img-top"
                          style="height: 300px; background-image: url('${movie.posterUrl}');
                          background-size: cover; background-position: center;">
@@ -48,7 +61,7 @@ function displayMovies(movies) {
                     <div class="card-body">
                         <h5 class="card-title">${movie.title}</h5>
                         <p class="card-text">
-                            ${movie.genre} • ${movie.year}
+                            ${movie.genre} â€¢ ${movie.year}
                         </p>
                     </div>
                 </div>
@@ -58,5 +71,11 @@ function displayMovies(movies) {
 }
 
 searchBtn.addEventListener("click", searchMovies);
+
+searchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        searchMovies();
+    }
+});
 
 loadMovies();

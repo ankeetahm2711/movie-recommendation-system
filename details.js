@@ -34,7 +34,7 @@ async function loadMovie() {
                     <h1 class="mb-3">${movie.title}</h1>
 
                     <p class="text-secondary">
-                        ${movie.genre} • ${movie.year}
+                        ${movie.genre} â€¢ ${movie.year}
                     </p>
 
                     <p class="lead">
@@ -76,7 +76,7 @@ function displaySimilarMovies(movies) {
                     <div class="card-body">
                         <h5 class="card-title">${movie.title}</h5>
                         <p class="card-text">
-                            ${movie.genre} • ${movie.year}
+                            ${movie.genre} â€¢ ${movie.year}
                         </p>
                     </div>
 
